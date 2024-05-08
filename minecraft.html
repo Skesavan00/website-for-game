@@ -1,0 +1,201 @@
+<html>
+    <head><title>minecraft</title>
+        <style>
+            body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    form {
+      text-align: center;
+    }
+    .rating {
+      margin-bottom: 10px;
+    }
+    .rating input[type="radio"] {
+      display: none;
+    }
+    .rating label {
+      cursor: pointer;
+      color: #ffd700;
+    }
+    .rating input[type="radio"] + label:before {
+      content: "\2605";
+    }
+    .success-message {
+      text-align: center;
+      margin-top: 20px;
+      color: green;
+    }
+            table, th, td{
+                border-collapse: collapse;
+                border: 1px;
+            }
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f2f2f2;
+            }
+            header {
+                background-color: #333;
+                color: #ffffff;
+                padding: 20px;
+                text-align: center;
+            }
+            nav {
+                background-color: #666;
+                padding: 10px;
+                text-align: center;
+            }
+            nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+            nav ul li {
+                display: inline;
+                margin-right: 20px;
+            }
+            nav ul li a {
+                color: #fff;
+                text-decoration: none;
+            }
+            section {
+                padding: 20px;
+                margin: 20px;
+                background-color: #fff;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <header style="background-image: url(minecraft\ banner.jpg);">
+            <h1 style="color: rgb(250, 107, 250);">welcome to my webpage</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="FWD project i220.html">HOME</a></li>
+                <li><a href="minecraft.html">MINECRAFT</a></li>
+                <li><a href="fortnite.html">FORTNITE</a></li>
+                <li><a href="lol.html">LoL</a></li>
+                <li><a href="free fire.html">FREE FIRE</a></li>
+                <li><a href="gta 5.html">GTA V</a></li>
+                <li><a href="bgmi.html">BGMI</a></li>
+            </ul>
+        </nav>
+        <h1>HISTORY OF MINECRAFT:</h1>
+        <p><i>"Minecraft" is a sandbox video game created by Markus Persson, also known as "Notch," and developed by Mojang Studios, which was later acquired by Microsoft. It was initially released to the public on May 17, 2009, as a developmental alpha version and later officially released on November 18, 2011. Since its release, Minecraft has become one of the best-selling video games of all time, with millions of players worldwide.
+
+            The game allows players to build and explore virtual worlds made up of textured cubes in a 3D procedurally generated environment. Players can gather resources, craft tools and items, and build structures or earthworks. There are multiple gameplay modes, including survival mode, where players must acquire resources to build the world and maintain health, and creative mode, where players have unlimited resources to build with and the ability to fly.
+            
+            One of the key features of Minecraft is its flexibility and openness to user-generated content. Players have created an extensive array of modifications (mods) and custom maps, expanding the game's possibilities far beyond its original design. This has led to the formation of a large and active community of players who share their creations, collaborate on projects, and participate in multiplayer servers.
+            
+            Minecraft's success has also led to various spin-offs and adaptations, including Minecraft: Story Mode, an episodic narrative-driven game developed by Telltale Games, and Minecraft Dungeons, an action-adventure game with dungeon-crawling elements. Additionally, Minecraft has been used in educational settings to teach subjects like mathematics, history, and programming, due to its engaging and versatile nature.
+            
+            Overall, Minecraft's enduring popularity can be attributed to its simple yet deep gameplay mechanics, its creative potential, and its ability to foster a sense of community among players.</i></p>
+
+            <center>
+                <section id="buy-now">
+                    <h2>Buy Minecraft!</h2>
+                    <p>Ready to join the adventure in Minecraft?</p>
+                    <button style="background-color: #4ee9e2; /* Green */
+                      border: none;
+                      color: rgb(235, 222, 222);
+                      padding: 15px 32px;
+                      text-align: center;
+                      text-decoration: none;
+                      display: inline-block;
+                      font-size: 16px;
+                      margin: 4px 2px;
+                      transition-duration: 0.4s;
+                      cursor: pointer;
+                      border-radius: 8px;">
+                      <a href="https://www.minecraft.net/en-us/store/minecraft-deluxe-collection-pc" style="color: white; text-decoration: none;">$ Buy Now</a>
+                    </button>
+                  </section>
+                <section>
+                <h1>OFFICIAL TRAILER</h1>         
+             <video width="400" controls>
+                <source src="Official Minecraft Trailer.mp4" type="video/mp4">
+             </center>
+            </video><hr>
+        </section>
+        <section>
+            <form id="reviewForm" action="/submit_review" method="POST">
+                <label for="name">Your Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="comt"><b><i>COMMENT ABOUT THIS GAME !</i></b></label><br>
+                <input type="text" id="comt" name="comt"><br>
+                <label for="rating">Rating:</label><br>
+                
+                  <input type="radio" id="star5" name="rating" ><label for="star5">1</label>
+                  <input type="radio" id="star4" name="rating" ><label for="star4">2</label>
+                  <input type="radio" id="star3" name="rating" ><label for="star3">3</label>
+                  <input type="radio" id="star2" name="rating" ><label for="star2">4</label>
+                  <input type="radio" id="star1" name="rating" ><label for="star1">5</label><br>
+                <label for="review">Review:</label><br>
+                <textarea id="review" name="review" rows="4" cols="50" required></textarea><br><br>
+                <button type="submit" id="submitBtn">Submit Review</button>
+              </form>
+              <div class="success-message" id="successMessage" style="display: none;">Submitted successfully!</div>
+              
+              <script>
+                document.getElementById("reviewForm").addEventListener("submit", function(event) {
+                  event.preventDefault(); 
+                  
+                  
+                  setTimeout(function() {
+                    document.getElementById("successMessage").style.display = "block"; 
+                    document.getElementById("reviewForm").reset(); 
+                    setTimeout(function() {
+                      document.getElementById("successMessage").style.display = "none"; 
+                    }, 3000);
+                  }, 1000);
+                });
+              </script><hr>
+            </section>
+                <center>
+            <h1><b><i>Minecraft Logo</i></b></h1>
+            <img src="minecraft img.jpg" alt="Trulli" width="500" height="333">
+        </center>
+            <h1>Here's a brief overview of some of the major updates (or "seasons," if you will) in Minecraft's history:</h1>
+            <p><i><p><b>1.Alpha and Beta Phases (2009-2011):</b> This period saw the initial development and testing of Minecraft. The game evolved significantly during this time, as Notch and the development team introduced new features and mechanics.<br>
+                <b>2.Official Release (2011):</b> Minecraft officially launched on November 18, 2011, marking the end of the alpha and beta phases. This release brought the game out of its testing phase and into full commercial availability.<br>
+                <b>3.Major Updates (2012-present):</b> After the official release, Minecraft has received numerous major updates, often adding significant content and features. Some notable updates include:<br>
+                 # The Adventure Update (1.0), which introduced features like villages, strongholds, and abandoned mineshafts.<br>
+                 # The Redstone Update (1.5), which expanded the functionality of redstone circuits and introduced new redstone-related blocks and mechanics.<br>
+                 # The Update Aquatic (1.13), which revamped underwater gameplay with new ocean biomes, mobs, and features.<br>
+                 # The Nether Update (1.16), which overhauled the Nether dimension with new biomes, mobs, and structures.<br>
+                 # The Caves & Cliffs Update (planned for 1.17), which promises significant changes to cave generation, new mobs, and other features.<br>
+                 <b>4.Bedrock Edition and Java Edition: Minecraft has two main editions:</b> 
+                   * Java Edition, originally developed by Mojang for PC, and Bedrock Edition, which is cross-platform and available on multiple devices, including consoles, mobile devices, and Windows 10. Both editions receive updates, although the timing and specific features may vary between them.</i></p><br>
+        
+        <h1>MAJOR BUGS IN MINEGRAFT</h1>
+        <p><i>Over the years, Minecraft has had its fair share of bugs and glitches, as is common with complex software. While many of these bugs have been addressed and fixed through updates, some have persisted or reappeared in various versions. Here are a few notable examples:<br>
+
+            <b>Duplication Glitches:</b> Minecraft has seen several glitches that allow players to duplicate items, leading to imbalances in gameplay, especially in multiplayer servers where economies can be affected. These glitches often involve exploiting timing or inventory mechanics to create copies of items.<br>
+            <b> Errors:</b> Occasionally, chunks of the game world fail to load properly, resulting in missing terrain or graphical anomalies. Players may encounter holes in the ground, floating objects, or other distortions in affected areas. Chunk errors can disrupt gameplay and navigation, particularly in multiplayer environments.<br>
+            <b>Redstone Bugs:</b> Redstone, Minecraft's in-game equivalent of electrical circuitry, is notoriously complex, and bugs related to its behavior have been reported. These bugs can affect the functionality of redstone contraptions, causing circuits to misfire, logic gates to behave unexpectedly, or signals to fail to propagate correctly.<br>
+            <b>Mob AI Issues:</b> Minecraft's various creatures, or mobs, sometimes exhibit erratic behavior due to AI bugs. This can include mobs getting stuck in terrain, failing to pathfind correctly, or behaving unpredictably in certain situations. Such issues can impact gameplay, particularly in survival mode where players interact with mobs regularly.<br>
+            <b>Performance and Optimization Problems:</b> Minecraft's performance can suffer on certain hardware configurations or in specific circumstances, leading to low frame rates, stuttering, or other performance issues. While improvements have been made over time, performance optimization remains an ongoing concern, especially as the game continues to receive updates and expansions.<br>
+            <b>Server-Side Lag:</b> In multiplayer environments, server-side lag can occur due to various factors, including hardware limitations, network congestion, or inefficient server software. This can result in delays in player actions, synchronization issues, and other gameplay disruptions, particularly in densely populated or heavily modded servers.<br>
+            <b>Mojang Studios,</b> the developer of Minecraft, regularly releases updates and patches to address known bugs and improve the overall stability and performance of the game. Players can help identify and report bugs through official channels, such as the Minecraft Issue Tracker, to contribute to ongoing efforts to enhance the game's quality.</i></p><br><hr>
+        <h1><b>POPULAR PLAYERS IN MINECRAFT</b></h1>
+        <p><i><b>Minecraft has a vibrant community of content creators, streamers, and players who have gained popularity through their gameplay, tutorials, and other contributions to the game. Here are some notable figures in the Minecraft community:</b><br>
+
+            <b>StampyLongHead (Joseph Garrett):</b> Stampy is known for his family-friendly Minecraft videos, particularly his "Let's Play" series aimed at children. His engaging personality and creative builds have earned him a massive following on YouTube.<br>
+            <b>DanTDM (Daniel Middleton):</b> DanTDM is one of the most popular Minecraft YouTubers, known for his diverse range of content, including Let's Plays, mod reviews, and mini-games. He's also ventured into other games but remains closely associated with Minecraft.<br>
+            <b>Dream (Clay):</b> Dream gained widespread popularity for his Minecraft challenge videos and speedrunning content. He's known for his impressive skills in the game and his entertaining personality, often collaborating with other popular Minecraft creators.<br>
+            <b>Technoblade (Dave):</b> Technoblade is renowned for his PvP (Player vs. Player) skills in Minecraft, particularly in mini-games like Bed Wars and Sky Wars. He's also known for his humor and storytelling in his videos.<br>
+            <b>Grian (Charles Batchelor):</b> Grian is a British YouTuber known for his building tutorials, Let's Play series, and creative Minecraft builds. He's highly regarded for his architectural skills and innovative building designs.<br>
+            <b>Mumbo Jumbo (Oliver Brotherhood):</b> Mumbo Jumbo is known for his Redstone tutorials and creative builds in Minecraft. He's admired for his intricate Redstone contraptions and his ability to explain complex concepts in a clear and accessible manner.<br>
+            <b>Skeppy (Zak Ahmed):</b> Skeppy is known for his entertaining Minecraft challenge videos, trolling videos, and collaborations with other popular Minecraft YouTubers. He's gained a large following for his humorous content and engaging personality.<br>
+            <b>Hermitcraft:</b> Hermitcraft is a popular Minecraft multiplayer server featuring a group of content creators known as "Hermits." These creators collaborate on various projects, challenges, and community events, attracting a dedicated fanbase.<br>
+            These are just a few examples of the many talented and influential individuals within the Minecraft community. The diversity of content and creativity within the community has played a significant role in Minecraft's enduring popularity over the years.</i></p><br>
+        </body>
+</html>
+            
+            
+            
+            
